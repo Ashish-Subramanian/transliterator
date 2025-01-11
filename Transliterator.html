@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@100..900&family=Noto+Sans+Tamil:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="Transliterator.css">
+</head>
+
+<body>
+  <div class="center">
+    <div class="heading1">
+      <h1>QUIZBOWL PRONUNCIATION AND ROMANIZATION TOOL</h1>
+    </div>
+    <select name="language" id="language" onchange="translit()">
+      <option value="null" selected>Select a language</option>
+      <!-- <option value="zh">Chinese, Mandarin</option>
+      <option value="el">Greek, Modern</option>
+      <option value="hi">Hindi</option>
+      <option value="ru">Russian</option>
+      <option value="grc">Greek, Ancient</option> -->
+      <option value="sa">Sanskrit and Pali</option>
+      <!-- <option value="ta">Tamil</option>
+      <option value="uk">Ukrainian</option> -->
+    </select>
+    <button class="copy" id="copyrom" onclick="copyRom()" disabled>Copy output</button>
+    <button class="copy" id="copypg" onclick="copyPG()" disabled>Copy guide</button>
+    <button class="copy" id="copyboth" onclick="copyBoth()" disabled>Copy output and guide</button>
+    <button class="copy" id="copyipa" onclick="copyIPA()" disabled>Copy IPA</button>
+    <label class="container" id="ipacheckboxc" for="ipacheckbox"><input type="checkbox" id="ipacheckbox" name="ipacheckbox" value="ipacheckbox"> Show IPA</label>
+    <label class="container" id="nlc" for="nl"><input type="radio" id="nl" name="ipaselection" value="nl" checked="true"> <span id="langspan"></span></label>
+    <label class="container" id="enc" for="en"><input type="radio" id="en" name="ipaselection" value="en"> English</label>
+    <label class="container" id="pgcheckboxc" for="pgcheckbox"><input type="checkbox" id="pgcheckbox" name="pgcheckbox" value="pgcheckbox"> Show guide</label>
+    <label class="container" id="capcheckboxc" for="capcheckbox"><input type="checkbox" id="capcheckbox" name="capcheckbox" value="capcheckbox"> Proper noun?</label>
+    </br></br>
+    <div class="inandout" id="inandout">
+      <textarea spellcheck="false" id="input" name="inputarea" rows="6" onkeyup="translit()"
+        oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"' class="area" readonly></textarea>
+      <textarea spellcheck="false" id="output" name="outputarea" rows="6" class="area" readonly></textarea>
+      <div class="prons">
+        <p><span id="ipa"></span><br><span id="pronunciation"></span></p>
+      </div>
+    </div>
+  </div>
+  <script src="Transliterator.js"></script>
+  <div class="notes">
+    <h1>NOTES</h1>
+    <p><span id="notes">This is a tool to romanize and provide rudimentary pronunciation guides for a number of common
+        languages in a quizbowl-friendly format. Note that this tool is meant to ease and automate certain parts of
+        proofreading, but this cannot substitute for human input and the output must be double-checked.<br><br>To use
+        this, first select a language from the dropdown menu in the top left. Then, paste text into the first text area
+        in the language's original script. The remaining text areas should automatically populate as makes
+        sense.<br><br>Some languages are not present or lack full functionality due to difficulties present in their
+        sound-spelling correspondences. For example, unvocalized Arabic cannot be adequately romanized while unaccented
+        Russian can be romanized but not adequately transcribed to pronunciation.</span></p><br>
+    <h1>CREDITS</h1>
+        <p>This tool was made by Ashish Subramanian.</p>
+  </div>
+</body>
+
+</html>
