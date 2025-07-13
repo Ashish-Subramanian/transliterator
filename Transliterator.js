@@ -188,6 +188,13 @@ function IPAtoPG(str) {
     pron = pron.replace(/əy/g, "y");
     pron = pron.replace(/ə([gtdpbsʃnmh])/g, "u$1");
     pron = pron.replace(/ə([rlv])/g, "uh$1");
+    pron = pron.replace(/ɛ(-| |\.|\,)/g, "eh$1");
+    pron = pron.replace(/ɛ$/gm, "eh");
+    pron = pron.replace(/ɛk/g, "eck");
+    pron = pron.replace(/ɛtʃ/g, "etch");
+    pron = pron.replace(/ɛdʒ/g, "edge");
+    pron = pron.replace(/ɛ([gtdpbsʃnmhlv])/g, "e$1");
+    pron = pron.replace(/ɛr/g, "ehr");
     pron = pron.replace(/tʃ/g, "ch");
     pron = pron.replace(/dʒ/g, "j");
     pron = pron.replace(/ʃ/g, "sh");
