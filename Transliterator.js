@@ -692,6 +692,13 @@ function translit() {
         ipanl = ipanl.replace(/ś-r/g, "-śr");
         ipanl = ipanl.replace(/k-h/g, "kh");
         ipanl = ipanl.replace(/g-h/g, "gh");
+        ipanl = ipanl.replace(/c-h/g, "ch");
+        ipanl = ipanl.replace(/j-h/g, "jh");
+        ipanl = ipanl.replace(/ṭ-h/g, "ṭh");
+        ipanl = ipanl.replace(/ḍ-h/g, "ḍh");
+        ipanl = ipanl.replace(/ṛ-h/g, "ṛh");
+        ipanl = ipanl.replace(/t-h/g, "th");
+        ipanl = ipanl.replace(/d-h/g, "dh");
         ipanl = ipanl.replace(/p-h/g, "ph");
         ipanl = ipanl.replace(/b-h/g, "bh");
         ipanl = ipanl.replace(/a-i/g, "ai");
