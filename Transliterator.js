@@ -148,8 +148,11 @@ function IPAtoPG(str) {
     pron = pron.replace(/eɪ([kgtdpbyrlvshnmz])(-| |\,|\.)/g, "a$1e$2");
     pron = pron.replace(/eɪ([kgtdpbyrlvshnmz])$/gm, "a$1e");
     pron = pron.replace(/eɪ([kgtdpbyrlvshnmz])d/gm, "a$1ed");
+    pron = pron.replace(/eɪ([rlnm])/gm, "ai$1");
+    pron = pron.replace(/eɪ([sz])([kgtdpbyrlvshnmz])d/gm, "a$1$2e");
     pron = pron.replace(/eɪʃ(-| |\,|\.)/g, "aysh$1");
     pron = pron.replace(/eɪʃ$/gm, "aysh");
+    ron = pron.replace(/eɪʃ/gm, "aysh");
     pron = pron.replace(/oʊ(-| |\,|\.)/g, "oh$1");
     pron = pron.replace(/oʊ$/gm, "oh");
     pron = pron.replace(/oʊ([ktdpbrlvsʃhnmz])(-| |\,|\.)/g, "o$1e$2");
