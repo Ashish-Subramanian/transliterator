@@ -147,6 +147,7 @@ function IPAtoPG(str) {
     pron = pron.replace(/eɪ$/gm, "ay");
     pron = pron.replace(/eɪ([kgtdpbyrlvshnmz])(-| |\,|\.)/g, "a$1e$2");
     pron = pron.replace(/eɪ([kgtdpbyrlvshnmz])$/gm, "a$1e");
+    pron = pron.replace(/eɪ([kgtdpbyrlvshnmz])d/gm, "a$1ed");
     pron = pron.replace(/eɪʃ(-| |\,|\.)/g, "aysh$1");
     pron = pron.replace(/eɪʃ$/gm, "aysh");
     pron = pron.replace(/oʊ(-| |\,|\.)/g, "oh$1");
@@ -693,6 +694,8 @@ function translit() {
         ipanl = ipanl.replace(/g-h/g, "gh");
         ipanl = ipanl.replace(/p-h/g, "ph");
         ipanl = ipanl.replace(/b-h/g, "bh");
+        ipanl = ipanl.replace(/a-i/g, "ai");
+        ipanl = ipanl.replace(/a-u/g, "au");
 
         var heavyvowels = "(āṃ|iṃ|īṃ|uṃ|ūṃ|r̥ṃ|eṃ|ēṃ|êṃ|aiṃ|oṃ|ōṃ|ôṃ|auṃ|aṃ|āṁ|iṁ|īṁ|uṁ|ūṁ|r̥ṁ|eṁ|ēṁ|êṁ|aiṁ|oṁ|ōṁ|ôṁ|auṁ|aṁ|āḥ|iḥ|īḥ|uḥ|ūḥ|r̥ḥ|eḥ|ēḥ|êḥ|aiḥ|oḥ|ōḥ|ôḥ|auḥ|aḥ|ā|ī|ū|ō|ē|ai|au)";
         var lightvowels = "(i|u|r̥|e|ê|o|ô|a)";
