@@ -689,6 +689,10 @@ function translit() {
         ipanl = syllabify(ipanl, vowels, consonants, ends);
         ipanl = ipanl.replace(/t-r/g, "-tr");
         ipanl = ipanl.replace(/ś-r/g, "-śr");
+        ipanl = ipanl.replace(/k-h/g, "kh");
+        ipanl = ipanl.replace(/g-h/g, "gh");
+        ipanl = ipanl.replace(/p-h/g, "ph");
+        ipanl = ipanl.replace(/b-h/g, "bh");
 
         var heavyvowels = "(āṃ|iṃ|īṃ|uṃ|ūṃ|r̥ṃ|eṃ|ēṃ|êṃ|aiṃ|oṃ|ōṃ|ôṃ|auṃ|aṃ|āṁ|iṁ|īṁ|uṁ|ūṁ|r̥ṁ|eṁ|ēṁ|êṁ|aiṁ|oṁ|ōṁ|ôṁ|auṁ|aṁ|āḥ|iḥ|īḥ|uḥ|ūḥ|r̥ḥ|eḥ|ēḥ|êḥ|aiḥ|oḥ|ōḥ|ôḥ|auḥ|aḥ|ā|ī|ū|ō|ē|ai|au)";
         var lightvowels = "(i|u|r̥|e|ê|o|ô|a)";
