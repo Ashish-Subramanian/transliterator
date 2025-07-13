@@ -681,7 +681,7 @@ function translit() {
         ipanl = ipanl.replace(/(\.|\,|\?|\!|\"|\')/g, "");
         ipanl = ipanl.replace(/\u0029/g, "");
 
-        var consonants = "(k|q|kh|x|g|ġ|gh|ṅ|c|ch|j|z|jh|ž|ñ|ṭ|ṭh|ḍ|ṛ|ḍh|ṛh|ṇ|t|th|d|dh|n|p|ph|f|b|bh|m|ṟ|ṉ|ḻ|y|ẏ|r|l|ḷ|v|w|ś|ṣ|s|h)";
+        var consonants = "(kh|gh|ch|jh|ṭh|ḍh|ṛh|th|dh|ph|bh|k|q|x|g|ġ|ṅ|c|j|z|ž|ñ|ṭ|ḍ|ṛ|ṇ|t|d|n|p|f|b|m|ṟ|ṉ|ḻ|y|ẏ|r|l|ḷ|v|w|ś|ṣ|s|h)";
         var vowels = "(āṃ|iṃ|īṃ|uṃ|ūṃ|r̥ṃ|eṃ|ēṃ|êṃ|aiṃ|oṃ|ōṃ|ôṃ|auṃ|aṃ|āṁ|iṁ|īṁ|uṁ|ūṁ|r̥ṁ|eṁ|ēṁ|êṁ|aiṁ|oṁ|ōṁ|ôṁ|auṁ|aṁ|āḥ|iḥ|īḥ|uḥ|ūḥ|r̥ḥ|eḥ|ēḥ|êḥ|aiḥ|oḥ|ōḥ|ôḥ|auḥ|aḥ|ā|i|ī|u|ū|r̥|e|ē|ê|ai|o|ō|ô|au|a)";
         // var ends = "( |,|\.|\)|\?|\!|\")";
         var ends = "( )";
