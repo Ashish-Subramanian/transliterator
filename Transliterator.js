@@ -48,7 +48,7 @@ function syllabify(str, vowels, consonants, ends) {
     let vcc = new RegExp(vowels + consonants + consonants, "g");
     let cce = new RegExp(consonants + "-" + consonants + ends, "g");
     let ccn = new RegExp(consonants + "-" + consonants + "$", "gm");
-    // let vv = new RegExp(vowels + vowels, "g");
+    let vv = new RegExp(vowels + vowels, "g");
 
     str = str.replace(vcv, "$1-$2$3");
     str = str.replace(vcv, "$1-$2$3");
@@ -56,8 +56,8 @@ function syllabify(str, vowels, consonants, ends) {
     str = str.replace(vcc, "$1$2-$3");
     str = str.replace(cce, "$1$2$3");
     str = str.replace(ccn, "$1$2");
-    // str = str.replace(vv, "$1-$2");
-    // str = str.replace(vv, "$1-$2");
+    str = str.replace(vv, "$1-$2");
+    str = str.replace(vv, "$1-$2");
 
     return str;
 }
