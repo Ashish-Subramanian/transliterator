@@ -64,11 +64,11 @@ textarea::read-only {
 /* #pronunciation {
     border-color: #fff;
     background-color: #F8f8f8;
-} */
+} 
 
 #ipa {
     font-family: "Fira Sans", sans-serif;
-}
+} */
 
 .notes {
     padding: 10px;
