@@ -67,8 +67,7 @@ textarea::read-only {
 } */
 
 #ipa {
-    border-color: #fff;
-    background-color: #F8f8f8;
+    font-family: "Fira Sans", sans-serif;
 }
 
 .notes {
